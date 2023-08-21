@@ -1,0 +1,36 @@
+import {Component} from 'react'
+import './index.css'
+import DenominationItem from '../DenominationItem'
+
+class CashWithdrawal extends Component {
+  render() {
+    const {denominationsList} = this.props
+    return (
+      <div className="bg-container">
+        <div className="card-container">
+          <div className="heading-container">
+            <div className="s-icon-container">
+              <p>S</p>
+            </div>
+            <h1>Sarah Williams</h1>
+          </div>
+          <div className="heading-container">
+            <p>Your Balance</p>
+            <h1>2000</h1>
+            <br />
+            <p>in rupees</p>
+          </div>
+          <h1>Withdraw</h1>
+          <p>CHOOSE SUM(IN RUPEES)</p>
+          <ul>
+            {denominationsList.map(eachItem => (
+              <DenominationItem denominationItem={eachItem} />
+            ))}
+          </ul>
+        </div>
+      </div>
+    )
+  }
+}
+
+export default CashWithdrawal
