@@ -1,0 +1,11 @@
+const DenominationItem = props => {
+  const {denominationItem} = props
+  const {value} = denominationItem
+  return (
+    <div className="money-container">
+      <h1>{value}</h1>
+    </div>
+  )
+}
+
+export default DenominationItem
